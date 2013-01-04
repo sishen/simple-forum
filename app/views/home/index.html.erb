@@ -1,0 +1,113 @@
+<div class="row-fluid posts-container">
+  <div class="span6">
+    <header>
+      <a class="btn nodes">
+        <i class="icon-angle-right"></i> 节点
+      </a>
+
+      <input type="text" class="search-query" placeholder="搜索">
+    </header>
+    <div class="posts">
+      <% 13.times do |i| %>
+      <div class="post clearfix <%= "active" if i == 5 %>">
+        <div class="pull-left avatar">
+          <a href="/u/dingding">
+            <img alt="Dingding Ye" height="36px" src="https://secure.gravatar.com/avatar/83c8cca11558f32207645ca270ae8475?size=48" width="48px"/>
+          </a>
+        </div>
+        <div class="content">
+          <div class="pull-right counter">
+            10
+          </div>
+          <div class="title">
+            雪景来了
+          </div>
+          <div class="info">
+            <span class="node">
+              瞎扯淡
+            </span>
+            <span class="author">
+              <a href="/u/dingding">Dingding Ye</a>
+            </span>
+            <span class="reply">
+              最后由 <span class="author"><a href="/u/ben">Ben</a></span> 于 10 分钟前回复
+            </span>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="span6">
+    <header>
+      <a class="btn expand">
+        <i class="icon-angle-right"></i>
+      </a>
+
+      <a href="/u/dingding" class="avatar">
+        <img alt="Dingding Ye" height="28px" src="https://secure.gravatar.com/avatar/83c8cca11558f32207645ca270ae8475?size=28" width="28px"/>
+      </a>
+
+      于 1 天前发布
+
+      <a class="node" href="/nodes/1">
+        瞎扯淡
+      </a>
+    </header>
+
+    <div class="detail">
+      <div class="title">
+        [杭州 2013年1月8日] Ruby Tuesday，我们来 Haskell 吧
+      </div>
+
+      <div class="body">
+        <div class="content">
+          <p>起因在这里 <a href="http://ruby-china.org/topics/7904" rel="nofollow" target="_blank">http://ruby-china.org/topics/7904</a></p>
+
+          <p>既然大家都对 haskell 心存向往，不如大家专门搞一次交流。</p>
+
+          <p>主讲： <a href="/luikore" class="at_user" title="@luikore"><i>@</i>luikore</a> <br>
+主题：haskell或者monad（暂定）<br>
+时间：2013年1月8日（暂定）<br>
+地址: 杭州西溪路浙大科技园 c栋 203室（暂定）</p>
+
+          <p>建议，这次交流的目的是激发大家的学习动力，大家可以借这个由头预先看看书学习一下，也免得空跑一趟</p>
+        </div>
+      </div>
+
+      <div class="comments">
+        <header>
+          <h4>回复</h4>
+        </header>
+
+        <% 4.times do %>
+          <div class="comment">
+            <div class="pull-left avatar">
+              <a href="/u/dingding">
+                <img alt="Dingding Ye" height="36px" src="https://secure.gravatar.com/avatar/83c8cca11558f32207645ca270ae8475?size=36" width="36px"/>
+              </a>
+            </div>
+            <div class="body">
+              <div class="info">
+                <span class="author">
+                  <a href="/u/dingding">Dingding Ye</a>
+                </span>
+                <span>
+                  1 楼,
+                  <abbr class="timeago" title="2012-12-27T23:11:41+08:00">
+                    8天前
+                  </abbr>
+                </span>
+              </div>
+              <div class="comment-content">
+                <p>哈哈, 是啊, 还下的挺大的, 还要加厚</p>
+                <p>十指基本冻僵了</p>
+              </div>
+            </div>
+          </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

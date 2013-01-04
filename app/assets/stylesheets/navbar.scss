@@ -1,0 +1,7 @@
+.navbar {
+  margin-bottom: 0px;
+
+  .navbar-inner {
+    @include border-radius(0px);
+  }
+}

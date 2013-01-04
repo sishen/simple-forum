@@ -41,9 +41,12 @@ gem "omniauth", ">= 1.1.1"
 gem "omniauth-identity"
 gem "omniauth-github"
 
+gem 'bootstrap-sass', '~> 2.2.2.0'
+
 group :development do
   gem "annotate", '~> 2.5.0'
   gem 'guard'
+  gem 'guard-rspec'
   gem 'guard-bundler'
   gem 'guard-annotate'
   gem 'guard-livereload'

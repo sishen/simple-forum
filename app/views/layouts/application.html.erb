@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>SimpleForum</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%#= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar navbar-inverse">
+    <%= render partial: "layouts/navbar" %>
+  </nav>
 
-<%= yield %>
+  <div class="container-fluid forum-container" role="main">
+    <%= yield %>
+  </div>
 
+  <footer>
+    <%= render partial: "layouts/footer" %>
+  </footer>
 </body>
 </html>

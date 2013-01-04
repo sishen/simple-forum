@@ -87,6 +87,8 @@ GEM
       rake
     atomic (1.0.1)
     bcrypt-ruby (3.0.1)
+    bootstrap-sass (2.2.2.0)
+      sass (~> 3.2)
     builder (3.1.4)
     capybara (1.1.4)
       mime-types (>= 1.16)
@@ -144,6 +146,8 @@ GEM
       em-websocket (>= 0.2.0)
       guard (>= 1.5.0)
       multi_json (~> 1.0)
+    guard-rspec (1.2.1)
+      guard (>= 1.1)
     hashie (1.2.0)
     hike (1.2.1)
     http_parser.rb (0.5.3)
@@ -264,6 +268,7 @@ DEPENDENCIES
   annotate (~> 2.5.0)
   arel!
   bcrypt-ruby (~> 3.0.0)
+  bootstrap-sass (~> 2.2.2.0)
   capybara (>= 1.1.2)
   coffee-rails!
   debugger
@@ -273,6 +278,7 @@ DEPENDENCIES
   guard-annotate
   guard-bundler
   guard-livereload
+  guard-rspec
   jbuilder
   jquery-rails
   omniauth (>= 1.1.1)
