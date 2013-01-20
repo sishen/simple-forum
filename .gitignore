@@ -16,5 +16,6 @@
 /tmp
 
 /config/database.yml
+/config/env.yml
 
 /.guard_history

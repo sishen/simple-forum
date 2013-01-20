@@ -1,7 +1,11 @@
 .posts-container {
-  .span6 {
+  .left-container {
     margin-left: 0;
-    width: 50%;
+    width: 38.1966%;  // 1:1.61803399
+  }
+  .right-container {
+    margin-left: 0;
+    width: 61.8034%;  // 1:1.61803399
   }
 
   header {

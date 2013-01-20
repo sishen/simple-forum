@@ -2,10 +2,14 @@
   <div class="navbar-inner">
     <a class="brand" href="#">Simple Forum</a>
     <ul class="nav pull-right">
-      <li><a href="#">Dingding</a></li>
-      <li>
-        <img alt="Dingding Ye" height="36px" src="https://secure.gravatar.com/avatar/83c8cca11558f32207645ca270ae8475?size=36" width="36px">
-      </li>
+      <% if logged_in? %>
+        <li><a href="#"><%= current_user.name %></a></li>
+        <li>
+          <%= gravatar_image_tag(current_user.email) %>
+        </li>
+      <% else %>
+        <li><a href="/login">Log In</a></li>
+      <% end %>
     </ul>
   </div>
 </div>
