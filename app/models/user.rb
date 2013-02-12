@@ -47,11 +47,12 @@ class User < ActiveRecord::Base
     end
 
     def create_from_auth(auth)
-      user = User.create!(
+      attrs = {
         name: auth['info']['name'],
         email: auth['info']['email'],
         authentications_attributes: [Authentication.build_from_auth(auth).attributes]
-      )
+      }
+      user = User.create!(attrs)
     end
   end
 end

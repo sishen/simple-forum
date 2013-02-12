@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130120143129) do
+ActiveRecord::Schema.define(version: 20130212050805) do
 
   create_table "authentications", force: true do |t|
     t.string   "provider",   limit: 16
@@ -24,6 +24,19 @@ ActiveRecord::Schema.define(version: 20130120143129) do
   end
 
   add_index "authentications", ["provider", "uid"], name: "index_authentications_on_provider_and_uid"
+
+  create_table "identities", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "confirmation_code"
+    t.boolean  "confirmed",         default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "identities", ["confirmation_code"], name: "index_identities_on_confirmation_code"
+  add_index "identities", ["email"], name: "index_identities_on_email"
 
   create_table "users", force: true do |t|
     t.string   "name"

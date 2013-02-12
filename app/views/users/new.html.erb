@@ -1,0 +1,33 @@
+<div id="signup" class="modal hide fade" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
+  <%= form_for Identity.new, url: "/auth/identity/register", html: { class: 'form-horizontal new-user' } do |f| %>
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h3>Sign Up</h3>
+    </div>
+
+    <div class="modal-body">
+      <div class="control-group">
+        <label class="control-label" for="identity_email">Email</label>
+        <div class="controls">
+          <input type="text" id="identity_email" name="email" placeholder="Email">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="identity_name">Name</label>
+        <div class="controls">
+          <input type="text" id="identity_name" name="name" placeholder="Username">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="identity_password">Password</label>
+        <div class="controls">
+          <input type="password" id="identity_password" name="password" placeholder="Password">
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-primary">Create Account</button>
+    </div>
+  <% end %>
+</div>

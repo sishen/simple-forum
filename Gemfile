@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails',     github: 'rails/rails'
 gem 'arel',      github: 'rails/arel'
 gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
+gem 'rails-observers'
 
 gem 'pg'
 
@@ -45,6 +46,14 @@ gem 'bootstrap-sass', '~> 2.2.2.0'
 
 # gravatar 
 gem "gravatar_image_tag", "~> 1.1.3"
+
+# mails
+gem 'mails_viewer'
+
+# background job
+gem 'sidekiq'
+gem 'sinatra'
+gem 'slim'
 
 group :development do
   gem "annotate", '~> 2.5.0'

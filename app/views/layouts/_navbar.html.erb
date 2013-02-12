@@ -5,10 +5,11 @@
       <% if logged_in? %>
         <li><a href="#"><%= current_user.name %></a></li>
         <li>
-          <%= gravatar_image_tag(current_user.email) %>
+          <a href="/logout">Logout</a>
         </li>
       <% else %>
-        <li><a href="/login">Log In</a></li>
+        <li><a id="signup-link" href="#signup" data-toggle="modal">Sign Up</a></li>
+        <li><a id="login-link" href="#login" data-toggle="modal">Log In</a></li>
       <% end %>
     </ul>
   </div>

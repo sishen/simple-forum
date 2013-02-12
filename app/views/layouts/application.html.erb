@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <title>SimpleForum</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%#= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => false %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => false %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -18,5 +18,10 @@
   <footer>
     <%= render partial: "layouts/footer" %>
   </footer>
+
+  <% unless logged_in? %>
+    <%= render template: "/sessions/new" %>
+    <%= render template: "/users/new" %>
+  <% end %>
 </body>
 </html>

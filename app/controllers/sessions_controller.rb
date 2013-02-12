@@ -2,11 +2,14 @@ class SessionsController < ApplicationController
   before_filter :logout_required, only: [:new]
 
   def new
-    redirect_to "/auth/github"
   end
 
   def create
     @current_user = User.from_auth(auth)
+
+    if auth['provider'] == "identity" && !auth['info']['confirmed']
+      render template: "/users/confirm", layout: false and return
+    end
 
     return_to = session.delete(:return_to)
     reset_session
